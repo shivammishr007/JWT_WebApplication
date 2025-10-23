@@ -8,9 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // Change for MVC/Views/TempData support
 builder.Services.AddControllersWithViews()
-    .AddCookieTempDataProvider()
+    .AddCookieTempDataProvider();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen()
+builder.Services.AddSwaggerGen();
 
 // JWT configuration
 var jwtKey = builder.Configuration["Jwt:Key"] ?? "ChangeThis_VeryLong_Default_Key_For_Development";
